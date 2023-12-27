@@ -1,0 +1,1193 @@
+html {
+  /*當 100vw = 1920px 時，除以 19.2 可以讓 font-size 變成 100px
+      在其他屬性時，原先使用 px 單位改成 rem，就可以隨螢幕尺寸等比例縮放
+      例如：24px 的字，寫成 0.24rem*/
+  font-size: calc(100vw / 19.2);
+}
+
+body {
+  font-family: "Noto Serif TC", serif;
+  font-weight: bold;
+  background-color: #000;
+  line-height: 1.5;
+  position: relative;
+  cursor: none;
+}
+
+.pc-d-none {
+  display: none;
+}
+
+.sp-d-none {
+  display: block;
+}
+
+.container1 {
+  background: url("../image/PC_bg_01.jpg") no-repeat center top;
+  background-size: 19.2rem 10.22rem;
+  height: 10.22rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container2 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_02.jpg") no-repeat center top;
+  background-size: 19.2rem 8.53rem;
+  height: 8.53rem;
+  position: relative;
+}
+
+.container3 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_03.jpg") no-repeat center top;
+  background-size: 19.2rem 9.37rem;
+  height: 9.37rem;
+  position: relative;
+}
+
+.container4 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_04.jpg") no-repeat center top;
+  background-size: 19.2rem 9.38rem;
+  height: 9.38rem;
+  position: relative;
+}
+
+.container5 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_05.jpg") no-repeat center top;
+  background-size: 19.2rem 7.9rem;
+  height: 7.9rem;
+  position: relative;
+}
+
+/* cursor start */
+.cursor {
+  position: absolute;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid white;
+  /* left: 0; */
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.cursor2 {
+  position: absolute;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: white;
+  /* left: 0; */
+  transform: translate(-50%, -50%);
+}
+
+.cursor-mousedown {
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  background: url("../image/cursor.png") no-repeat center;
+  background-size: 100px 100px;
+}
+
+.cursor-mouseover {
+  position: absolute;
+  z-index: 1000;
+  width: 150px;
+  height: 150px;
+  border: 0;
+  background: url("../image/cursor.png") no-repeat center;
+  background-size: 150px 150px;
+}
+/* cursor end */
+
+/*--audio_star--*/
+.mu_btn {
+  position: fixed;
+  width: 107px;
+  height: auto;
+  padding-bottom: 0px;
+  top: 3%;
+  right: 2%;
+  z-index: 999;
+  background-color: rgba(29, 3, 59, 0);
+  /*顏色標記*/
+  display: block;
+}
+
+.mu_btn:disabled {
+  cursor: default;
+}
+.mu_btn:-moz-focusring {
+  outline: auto;
+}
+
+.mu_btn [hidden] {
+  display: none;
+}
+
+.mu_btn-active {
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 0 10px transparent;
+  display: block;
+  -webkit-mask-image: none;
+  overflow: hidden;
+  padding: 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  visibility: visible;
+}
+/*--audio_end--*/
+
+/* main-text */
+.main-text {
+  position: relative;
+  z-index: 100;
+}
+.main-text .wrap {
+  position: absolute;
+  z-index: 1;
+  width: 8rem;
+  left: calc(50% - 4rem);
+  padding-top: 3.8rem;
+}
+
+.main-text .text {
+  margin-top: -1.4rem;
+}
+
+.main-text a {
+  display: block;
+}
+
+.main-text a img {
+  width: 7.5rem;
+  height: 3.91rem;
+  margin: 0 auto;
+  animation: pulse ease-out 3s infinite;
+  -webkit-animation: pulse ease-out 3s infinite;
+  -moz-animation: pulse ease-out 3s infinite;
+}
+
+.main-text .text .title {
+  width: 6.96rem;
+  height: 2.42rem;
+  margin: 0 auto;
+}
+
+.main-text p {
+  font-size: 0.32rem;
+  text-align: center;
+  margin-top: -0.2rem;
+  background: linear-gradient(to top, #c6b298, #fff);
+  background: -webkit-linear-gradient(to top, #c6b298, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+}
+
+/* container1 */
+.fire_box {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  padding-bottom: 30%;
+  bottom: -0.9rem;
+  left: 0;
+  /* background-color: #1883bd00; */
+  display: block;
+}
+
+#particles-js {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.clouds {
+  position: absolute;
+  top: 5.37rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: transparent url("../image/clouds.png") repeat top center;
+  z-index: 3;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+.container1 .content {
+  position: absolute;
+  left: -15%;
+  top: -5%;
+  width: 130%;
+  height: 110%;
+}
+
+.container1 #scene .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container1 #scene .layer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9.37rem;
+  object-fit: contain;
+}
+
+.mask {
+  position: absolute;
+  z-index: 0;
+  top: 5vw;
+  left: 0;
+}
+
+.layer03 {
+  animation: bounce ease-out 5s infinite;
+  -webkit-animation: bounce ease-out 5s infinite;
+  -moz-animation: bounce ease-out 5s infinite;
+}
+
+.layer04 {
+  animation: bounce ease-out 4s infinite;
+  -webkit-animation: bounce ease-out 4s infinite;
+  -moz-animation: bounce ease-out 4s infinite;
+}
+
+/* container2 */
+.container2 .ch04 {
+  position: absolute;
+  z-index: 1;
+  top: -1.5rem;
+  left: 0;
+  background: url("../image/ch04.png") no-repeat right;
+  background-size: 10.78rem 9.86rem;
+  width: 10.78rem;
+  height: 9.86rem;
+}
+
+.container2 .text p {
+  position: absolute;
+  z-index: 2;
+  top: 4rem;
+  right: 4.5rem;
+  font-size: 0.2rem;
+  color: #e1dedd;
+  line-height: 2;
+  text-align: center;
+}
+
+.photo01 {
+  position: absolute;
+  z-index: 0;
+  top: 2.8rem;
+  right: 1.9rem;
+  width: 9.62rem;
+  height: 4.73rem;
+}
+
+.SP_photo01 {
+  display: none;
+}
+
+/* container3 */
+.container3 {
+  position: relative;
+}
+.container3 .wrap {
+  padding-top: 1.5rem;
+  max-width: 8.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.55rem;
+}
+
+.container3 .apply .text {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: calc(50% - (2.7rem / 2));
+}
+
+.container3 .apply {
+  position: relative;
+  z-index: 1;
+}
+
+.container3 .apply h2 {
+  font-size: 0.38rem;
+  text-align: center;
+  line-height: 1;
+  /* color: white; */
+  margin-top: 1.3rem;
+  background: linear-gradient(to top, #c6b298, #fff);
+  background: -webkit-linear-gradient(to top, #c6b298, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+}
+
+.container3 .apply p {
+  width: 2.7rem;
+  margin: 0 auto;
+  font-size: 0.2rem;
+  text-align: center;
+  color: #e1dedd;
+  margin-top: 1.1rem;
+}
+
+.container3 .apply img {
+  width: 4.19rem;
+  height: 5.16rem;
+}
+
+.photo02 {
+  position: absolute;
+  z-index: 0;
+  top: 0.5rem;
+  left: 0rem;
+  background: url("../image/photo02.png") no-repeat right;
+  background-size: 8.32rem 4.76rem;
+  width: 7.1rem;
+  height: 4.76rem;
+}
+
+.photo03 {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.3rem;
+  right: 0.8rem;
+  background: url("../image/photo03.png") no-repeat center;
+  background-size: 6rem 4.1rem;
+  width: 6rem;
+  height: 4.1rem;
+}
+
+.container3 img.link {
+  position: absolute;
+  z-index: 3;
+  bottom: 1.4rem;
+  left: calc(50% - (3.13rem / 2));
+  display: block;
+  margin: 0 auto;
+  width: 3.13rem;
+  height: 0.78rem;
+  animation: pulse ease-out 3s infinite;
+  -webkit-animation: pulse ease-out 3s infinite;
+  -moz-animation: pulse ease-out 3s infinite;
+}
+
+/* container4 */
+.container4 .ch05 {
+  position: absolute;
+  z-index: 0;
+  top: -2rem;
+  right: 0;
+  background: url(../image/ch05.png) no-repeat left;
+  background-size: 11.42rem 11.94rem;
+  width: 10.23rem;
+  height: 11.94rem;
+}
+
+.container4 .wrap {
+  padding-top: 1.8rem;
+  max-width: 8.5rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.st img {
+  width: 6.3rem;
+  height: 0.63rem;
+  margin: 0 auto 0.93rem auto;
+}
+
+.hero {
+  position: relative;
+}
+.hero-frame {
+  width: 7.92rem;
+  height: 4.47rem;
+  position: absolute;
+  top: 0;
+  left: calc(50% - (7.92rem / 2));
+}
+/* swiper */
+.swiper {
+  width: 6.75rem;
+  height: 3.5rem;
+  top: calc((4.47rem - 3.5rem) / 2);
+  border: #c6b298ad 1px solid;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next {
+  position: absolute;
+  z-index: 1;
+  background: url("../image/arrow_next.png") no-repeat center;
+  background-size: 0.64rem 1.28rem;
+  width: 0.64rem;
+  height: 1.28rem;
+  top: calc(50% - -0.1rem);
+  right: 0.2rem;
+  content: "next";
+}
+
+.swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  z-index: 1;
+  background: url("../image/arrow_prev.png") no-repeat center;
+  background-size: 0.64rem 1.28rem;
+  width: 0.64rem;
+  height: 1.28rem;
+  top: calc(50% - -0.1rem);
+  left: 0.2rem;
+  content: "prev";
+}
+
+.swiper-button-prev:after {
+  display: none;
+}
+
+.hero .swiper-pagination {
+  bottom: -2rem;
+}
+
+.swiper-pagination-bullet {
+  background: url("../image/dot.png") no-repeat center;
+  background-size: 0.39rem 0.39rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: url("../image/dot_active.png") no-repeat center;
+  background-size: 0.39rem 0.39rem;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* container5 */
+.container5 .wrap {
+  padding-top: 2rem;
+  max-width: 8.5rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.container5 .note {
+  color: #e1dedd;
+  font-size: 0.16rem;
+  list-style: decimal;
+  padding-left: 0.66rem;
+  padding-right: 0.5rem;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.photo04 {
+  position: absolute;
+  z-index: 0;
+  top: -0.6rem;
+  left: 0.5rem;
+  background: url("../image/photo04.png") no-repeat center;
+  background-size: 6.63rem 4.01rem;
+  width: 6.63rem;
+  height: 4.01rem;
+}
+
+.photo05 {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.3rem;
+  right: 0;
+  background: url("../image/photo05.png") no-repeat left;
+  background-size: 7.35rem 4.22rem;
+  width: 5.85rem;
+  height: 4.22rem;
+}
+
+/* footer */
+.footer {
+  background: url("../image/footer.jpg") no-repeat;
+  background-size: 19.2rem 7rem;
+  background-position: center top;
+  width: 100%;
+  height: 2rem;
+  padding-top: 0.5rem;
+}
+
+.footer .wrap {
+  max-width: 16rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a-i-c {
+  display: flex;
+  align-items: center;
+}
+
+.note-body {
+  display: flex;
+  align-items: center;
+}
+
+.ican-logo img {
+  width: 1.5rem;
+  height: 0.75rem;
+}
+
+.all-right {
+  font-size: 0.12rem;
+  line-height: 1.2;
+  color: #e1dedd;
+  margin-left: 0.2rem;
+  opacity: 0.8;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.logos img {
+  width: 2rem;
+  height: 0.84rem;
+}
+
+img.age15 {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.2rem;
+}
+
+.note-15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 7.5rem;
+}
+
+.note-15 li {
+  font-size: 0.12rem;
+  line-height: 1.2;
+  color: #e1dedd;
+  list-style: disc;
+  margin-left: 0.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  /* footer */
+  .footer {
+    background: url("../image/footer.jpg") no-repeat;
+    background-size: 19.2rem 7rem;
+    background-position: center top;
+    height: 5rem;
+    padding-top: 0.5rem;
+  }
+  .footer .wrap {
+    max-width: 18rem;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .note-15 {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* container2 */
+  .container2 .text p {
+    top: 3.8rem;
+    right: 3.8rem;
+    line-height: 1.5;
+  }
+  /* container3 */
+  .container3 .wrap {
+    padding-top: 0.2rem;
+    max-width: 13rem;
+    justify-content: space-evenly;
+    margin-bottom: 0.2rem;
+  }
+  .container3 .apply .text {
+    left: calc(50% - (4rem / 2));
+  }
+
+  .container3 .apply h2 {
+    font-size: 0.65rem;
+    margin-top: 1.75rem;
+  }
+
+  .container3 .apply p {
+    width: 4rem;
+    font-size: 0.3rem;
+    margin-top: 1.1rem;
+  }
+
+  .container3 .apply img {
+    width: 6rem;
+    height: 7.395rem;
+  }
+
+  .container3 img.link {
+    width: 4.695rem;
+    height: 1.17rem;
+  }
+
+  /* container5 */
+  .container5 .wrap {
+    max-width: 13rem;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: calc(100vw / 7.5);
+  }
+
+  body > div {
+    overflow-x: hidden;
+  }
+
+  .pc-d-none {
+    display: block;
+  }
+
+  .sp-d-none {
+    display: none;
+  }
+
+  .clouds {
+    top: 9.37rem;
+  }
+
+  .container1 {
+    background: url("../image/SP_bg_01.jpg") no-repeat center top;
+    background-size: 7.5rem 15.31rem;
+    height: 15.31rem;
+  }
+
+  .container2 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_02.jpg") no-repeat center top;
+    background-size: 7.5rem 13.7rem;
+    height: 13.7rem;
+  }
+
+  .container3 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_03.jpg") no-repeat center top;
+    background-size: 7.5rem 19.57rem;
+    height: 19.57rem;
+  }
+
+  .container4 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_04.jpg") no-repeat center top;
+    background-size: 7.5rem 9.18rem;
+    height: 9.18rem;
+  }
+
+  .container5 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_05.jpg") no-repeat center top;
+    background-size: 7.5rem 13.59rem;
+    height: 13.59rem;
+  }
+
+  .mu_btn {
+    width: 20.28%;
+    top: 3%;
+    right: 5%;
+  }
+
+  /* main-text */
+  .main-text .wrap {
+    width: 100%;
+    left: calc(50% - 3.75rem);
+    padding-top: 8rem;
+  }
+
+  .main-text a img {
+    width: 6.5rem;
+    height: 3.4rem;
+  }
+
+  .main-text .text {
+    margin-top: -0.8rem;
+  }
+
+  .main-text .text .title {
+    width: 7.5rem;
+    height: 3.66rem;
+  }
+
+  .main-text p {
+    position: relative;
+    z-index: 2;
+    left: calc(50% - 2rem);
+    font-size: 0.4rem;
+    margin-top: -1.85rem;
+    line-height: 1.2;
+    width: 4rem;
+  }
+
+  /* container1 */
+  .SP_ch03 {
+    background: url("../image/SP_ch03.png") no-repeat center;
+    background-size: 7.5rem 12.17rem;
+    width: 7.5rem;
+    height: 10rem;
+    animation: bounce ease-out 5s infinite;
+    -webkit-animation: bounce ease-out 5s infinite;
+    -moz-animation: bounce ease-out 5s infinite;
+  }
+
+  /* container2 */
+  .container2 {
+    padding-top: 5rem;
+  }
+  .container2 .ch04 {
+    position: absolute;
+    z-index: 0;
+    top: -0.7rem;
+    left: 0;
+    background: url("../image/ch04.png") no-repeat;
+    background-size: 12.936rem 11.832rem;
+    background-position: calc(50% - 1rem) center;
+    width: 100%;
+    height: 9.86rem;
+  }
+
+  .photo01 {
+    display: none;
+  }
+
+  .SP_photo01 {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 6.77rem;
+    height: 7.19rem;
+    margin: 0 auto;
+  }
+
+  .container2 .text p {
+    position: absolute;
+    z-index: 2;
+    top: 6.3rem;
+    right: 0.95rem;
+    font-size: 0.32rem;
+    color: #e1dedd;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* container3 */
+  .container3 .wrap {
+    max-width: 7rem;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .photo02 {
+    top: 1.2rem;
+    left: 0rem;
+    background: url("../image/photo02.png") no-repeat right;
+    background-size: 8.32rem 4.76rem;
+    width: 5rem;
+    height: 4.76rem;
+  }
+
+  .photo03 {
+    bottom: 6.2rem;
+    right: 0rem;
+    background: url("../image/photo03.png") no-repeat left;
+    background-size: 7.06rem 4.83rem;
+    width: 5.5rem;
+    height: 4.83rem;
+  }
+
+  .container3 img.link {
+    bottom: 2.5rem;
+    left: calc(50% - (4.695rem / 2));
+  }
+
+  /* container4 */
+  .container4 .ch05 {
+    top: -4rem;
+    right: 0;
+    background: url(../image/ch05.png) no-repeat;
+    background-size: 11.42rem 11.94rem;
+    background-position: calc(50% - -1rem) top;
+    width: 100%;
+    height: 9rem;
+  }
+
+  .container4 .wrap {
+    padding-top: 2.5rem;
+    max-width: 7.5rem;
+  }
+
+  .st img {
+    width: 7.5rem;
+    height: 0.756rem;
+    margin: 0 auto 0.4rem auto;
+  }
+
+  .hero {
+    position: relative;
+  }
+  .hero-frame {
+    width: 6.5rem;
+    height: 3.68rem;
+    position: absolute;
+    top: 0;
+    left: calc(50% - (6.5rem / 2));
+  }
+
+  /* swiper */
+  .swiper {
+    width: 6rem;
+    height: 3.11rem;
+    top: calc((3.11rem - 2.55rem) / 2);
+  }
+
+  .swiper-button-next {
+    top: calc(50% - 0.1rem);
+  }
+
+  .swiper-button-prev {
+    top: calc(50% - 0.1rem);
+  }
+
+  .hero .swiper-pagination {
+    bottom: -1.5rem;
+  }
+
+  /* container5 */
+  .container5 .note {
+    font-size: 0.28rem;
+    padding-left: 0.78rem;
+  }
+
+  /* footer */
+  .a-i-c {
+    flex-direction: column;
+  }
+  .footer {
+    background: url("../image/footer.jpg") no-repeat center;
+    background-size: 19.2rem 7rem;
+    background-position: center top;
+    height: 6.5rem;
+    padding-top: 0.6rem;
+  }
+  .footer .wrap {
+    max-width: 7rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .ican-logo img {
+    width: 1.8rem;
+    height: 0.9rem;
+  }
+
+  .logos img {
+    width: 2.3rem;
+    height: 0.9rem;
+  }
+
+  img.age15 {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .all-right {
+    font-size: 0.16rem;
+    text-align: center;
+  }
+
+  .note-15 {
+    width: 5rem;
+  }
+
+  .note-15 li {
+    font-size: 0.16rem;
+  }
+}
+
+/* 動畫 animation*/
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    -ms-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotate {
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -moz-animation: rotate 5s linear infinite;
+  -ms-animation: rotate 5s linear infinite;
+  -o-animation: rotate 5s linear infinite;
+  -webkit-animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+}
